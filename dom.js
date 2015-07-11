@@ -14,6 +14,7 @@ for(var i = 0; i < spot.length; i++) {
         turnCounter += 1;
         gameArr[index] = 1;
         document.getElementsByClassName('turn')[0].innerHTML = "O's TuRn";
+
         if(winnerCheck(gameArr)) {
           document.getElementsByClassName('turn')[0].innerHTML = winnerCheck(gameArr);
           alert(winnerCheck(gameArr));
@@ -26,6 +27,7 @@ for(var i = 0; i < spot.length; i++) {
         turnCounter += 1;
         gameArr[index] = 0;
         document.getElementsByClassName('turn')[0].innerHTML = "X's TuRn";
+        
         if(winnerCheck(gameArr)){
           document.getElementsByClassName('turn')[0].innerHTML = winnerCheck(gameArr);
           alert(winnerCheck(gameArr));
