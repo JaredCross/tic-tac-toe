@@ -10,29 +10,29 @@ for(var i = 0; i < spot.length; i++) {
     if(this.innerHTML) {
       alert("ALREADY TICKED");
     } else if (turnCounter % 2 === 0) {
-      this.innerHTML = 'X';
-      turnCounter += 1;
-      gameArr[index] = 1;
-      document.getElementsByClassName('turn')[0].innerHTML = "O's TuRn";
-      if(winnerCheck(gameArr)) {
-        document.getElementsByClassName('turn')[0].innerHTML = winnerCheck(gameArr);
-        alert(winnerCheck(gameArr));
-        gameArr = ['e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e'];
-        $('.game-container div').html('');
-        document.getElementsByClassName('turn')[0].innerHTML = "X's TuRn";
-      }
+        this.innerHTML = 'X';
+        turnCounter += 1;
+        gameArr[index] = 1;
+        document.getElementsByClassName('turn')[0].innerHTML = "O's TuRn";
+        if(winnerCheck(gameArr)) {
+          document.getElementsByClassName('turn')[0].innerHTML = winnerCheck(gameArr);
+          alert(winnerCheck(gameArr));
+          gameArr = ['e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e'];
+          $('.game-container div').html('');
+          document.getElementsByClassName('turn')[0].innerHTML = "X's TuRn";
+        }
     } else {
-      this.innerHTML = 'O';
-      turnCounter += 1;
-      gameArr[index] = 0;
-      document.getElementsByClassName('turn')[0].innerHTML = "X's TuRn";
-      if(winnerCheck(gameArr)){
-        document.getElementsByClassName('turn')[0].innerHTML = winnerCheck(gameArr);
-        alert(winnerCheck(gameArr));
-        gameArr = ['e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e'];
-        $('.game-container div').html('');
+        this.innerHTML = 'O';
+        turnCounter += 1;
+        gameArr[index] = 0;
         document.getElementsByClassName('turn')[0].innerHTML = "X's TuRn";
-      }
+        if(winnerCheck(gameArr)){
+          document.getElementsByClassName('turn')[0].innerHTML = winnerCheck(gameArr);
+          alert(winnerCheck(gameArr));
+          gameArr = ['e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e'];
+          $('.game-container div').html('');
+          document.getElementsByClassName('turn')[0].innerHTML = "X's TuRn";
+        }
     }
   });
 }

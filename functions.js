@@ -12,9 +12,9 @@ function winnerCheck (gameArr) {
 
   for (var i = 0; i < winArrCheck.length; i ++){
     if(winArrCheck[i] === 3) {
-      return "X Wins";
+        return "X Wins";
     } else if (winArrCheck[i] === 0) {
-      return "O Wins";
+        return "O Wins";
     }
   };
 
