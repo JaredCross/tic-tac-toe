@@ -1,7 +1,6 @@
-var spot = document.querySelectorAll('.spot'), i;
+var spot = document.querySelectorAll('.spot');
 
 //game functions goes here
-var game = true;
 var turnCounter = 0;
 var gameArr = ['e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e'];
 
@@ -15,12 +14,12 @@ for(var i = 0; i < spot.length; i++) {
       turnCounter += 1;
       gameArr[index] = 1;
       document.getElementsByClassName('turn')[0].innerHTML = "O's TuRn";
-      if(winnerCheck(gameArr)){
+      if(winnerCheck(gameArr)) {
         document.getElementsByClassName('turn')[0].innerHTML = winnerCheck(gameArr);
-        var gameOver = alert(winnerCheck(gameArr));
-          gameArr = ['e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e'];
-          $('.game-container div').html('');
-          document.getElementsByClassName('turn')[0].innerHTML = "X's TuRn";
+        alert(winnerCheck(gameArr));
+        gameArr = ['e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e'];
+        $('.game-container div').html('');
+        document.getElementsByClassName('turn')[0].innerHTML = "X's TuRn";
       }
     } else {
       this.innerHTML = 'O';
@@ -29,10 +28,10 @@ for(var i = 0; i < spot.length; i++) {
       document.getElementsByClassName('turn')[0].innerHTML = "X's TuRn";
       if(winnerCheck(gameArr)){
         document.getElementsByClassName('turn')[0].innerHTML = winnerCheck(gameArr);
-        var gameOver = alert(winnerCheck(gameArr));
-          gameArr = ['e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e'];
-          $('.game-container div').html('');
-          document.getElementsByClassName('turn')[0].innerHTML = "X's TuRn";
+        alert(winnerCheck(gameArr));
+        gameArr = ['e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e'];
+        $('.game-container div').html('');
+        document.getElementsByClassName('turn')[0].innerHTML = "X's TuRn";
       }
     }
   });
